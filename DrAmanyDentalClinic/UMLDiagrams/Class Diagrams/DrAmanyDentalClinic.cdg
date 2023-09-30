@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DrAmanyDentalClinic">
+  <ClassDiagramComponents>
+    <Class name="User" package="" visibility="public" xPosition="1734.0" yPosition="475.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="Username" type="string" visibility="private"/>
+        <Field name="Password" type="string" visibility="private"/>
+        <Field name="UserType" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Login" returnType="UserType" visibility="public">
+          <Argument type="UserType" name="X"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Person" package="" visibility="public" xPosition="1456.0" yPosition="348.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="Name" type="string" visibility="private"/>
+        <Field name="PhoneNumber" type="string" visibility="private"/>
+        <Field name="AddressID" type="int" visibility="private"/>
+        <Field name="Birthdate" type="date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="LivesIn" returnType="Address" visibility="public">
+          <Argument type="Address" name="X"/>
+        </Method>
+        <Method name="Login" returnType="User" visibility="public">
+          <Argument type="User" name="X"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Address" package="" visibility="public" xPosition="1470.0" yPosition="936.0">
+      <Fields>
+        <Field name="AddressID" type="int" visibility="private"/>
+        <Field name="Address" type="string" visibility="private"/>
+        <Field name="ParentID" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="FillAddress" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="" visibility="public" xPosition="580.0" yPosition="367.0">
+      <Fields>
+        <Field name="ShiftTime" type="string" visibility="private"/>
+        <Field name="JobType" type="string" visibility="private"/>
+        <Field name="Salary" type="int" visibility="private"/>
+        <Field name="JobTypeID" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Works" returnType="JobType" visibility="public">
+          <Argument type="JobType" name="X"/>
+        </Method>
+        <Method name="GenerateReport" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Job Type" package="" visibility="public" xPosition="63.0" yPosition="424.0">
+      <Fields>
+        <Field name="JobTypeID" type="int" visibility="private"/>
+        <Field name="JobTypeName" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Patient" package="" visibility="public" xPosition="1107.0" yPosition="669.0">
+      <Fields>
+        <Field name="BloodType" type="string" visibility="private"/>
+        <Field name="HealthCareID" type="int" visibility="private"/>
+        <Field name="LocalID" type="int" visibility="private"/>
+        <Field name="History" type="MedicalDiagnosis[]" visibility="private"/>
+        <Field name="Email" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="BookAppointment" returnType="void" visibility="public"/>
+        <Method name="SeeDoctor" returnType="Doctor" visibility="public">
+          <Argument type="Doctor" name="X"/>
+        </Method>
+        <Method name="TakeDiagnosis" returnType="MedicalDiagnosis" visibility="public">
+          <Argument type="MedicalDiagnosis" name="X"/>
+        </Method>
+        <Method name="Pay" returnType="void" visibility="public">
+          <Argument type="string" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Doctor" package="" visibility="public" xPosition="667.0" yPosition="723.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Works" returnType="JobType" visibility="public">
+          <Argument type="JobType" name="X"/>
+        </Method>
+        <Method name="Examine" returnType="Patient[]" visibility="public">
+          <Argument type="Patient[]" name="X"/>
+        </Method>
+        <Method name="FetchData" returnType="void" visibility="public"/>
+        <Method name="WriteDiagnosis" returnType="MedicalDiagnosis" visibility="public">
+          <Argument type="MedicalDiagnosis" name="X"/>
+        </Method>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Receptionist" package="" visibility="public" xPosition="192.0" yPosition="739.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+        <Method name="FetchData" returnType="void" visibility="public"/>
+        <Method name="PrintDiagnosis" returnType="MedicalDiagnosis" visibility="public">
+          <Argument type="MedicalDiagnosis" name="X"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="" visibility="public" xPosition="847.0" yPosition="132.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Works" returnType="JobType" visibility="public">
+          <Argument type="JobType" name="X"/>
+        </Method>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+        <Method name="GenerateReport" returnType="void" visibility="public"/>
+        <Method name="FetchData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Medical History" package="" visibility="public" xPosition="953.0" yPosition="974.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="MedicalDiagnosis" type="string" visibility="private"/>
+        <Field name="PatientID" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="User Type" package="" visibility="public" xPosition="1751.0" yPosition="837.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="UserType" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Database" package="" visibility="public" xPosition="847.0" yPosition="532.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getInstance" returnType="void" visibility="public"/>
+        <Method name="GetConnection" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Invoice" package="" visibility="public" xPosition="562.0" yPosition="972.0">
+      <Fields>
+        <Field name="PatientName" type="String" visibility="private"/>
+        <Field name="Details" type="String" visibility="private"/>
+        <Field name="Money" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="BaseInvoice" package="" visibility="public" xPosition="393.0" yPosition="1171.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="GetPatientName" returnType="void" visibility="public"/>
+        <Method name="GetDetails" returnType="void" visibility="public"/>
+        <Method name="GetMoney" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="InvoiceDecorator" package="" visibility="public" xPosition="740.0" yPosition="1156.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="resetDetailsMoney" returnType="void" visibility="public"/>
+        <Method name="showDetails" returnType="void" visibility="public"/>
+        <Method name="showMoney" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cotton" package="" visibility="public" xPosition="782.0" yPosition="1432.0">
+      <Fields>
+        <Field name="x" type="InvoiceDecorator" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="AddCotton" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Syringe" package="" visibility="public" xPosition="551.0" yPosition="1432.0">
+      <Fields>
+        <Field name="x" type="InvoiceDecorator" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="AddSyringe" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="StrategyContext" package="" visibility="public" xPosition="178.0" yPosition="1315.0">
+      <Fields>
+        <Field name="Strategy" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ShowPaymentMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CashMethod" package="" visibility="public" xPosition="31.0" yPosition="1723.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ShowMethod" returnType="String" visibility="public">
+          <Argument type="String" name="Method"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreditCardMethod" package="" visibility="public" xPosition="314.0" yPosition="1723.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ShowMethod" returnType="String" visibility="public">
+          <Argument type="String" name="Method"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Method" package="" visibility="public" xPosition="185.0" yPosition="1052.0">
+      <Fields>
+        <Field name="PaymentMethod" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPaymentMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IControl" package="" visibility="public" xPosition="280.0" yPosition="14.0">
+      <Methods>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IView" package="" visibility="public" xPosition="1389.0" yPosition="14.0">
+      <Methods>
+        <Method name="FetchData" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IStrategy" package="" visibility="public" xPosition="160.0" yPosition="1553.0">
+      <Methods>
+        <Method name="ShowMethod" returnType="String" visibility="public">
+          <Argument type="String" name="Method"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="Reservations" package="" visibility="public" xPosition="1171.0" yPosition="1065.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="PatientID" type="int" visibility="private"/>
+        <Field name="PatientName" type="string" visibility="private"/>
+        <Field name="ReservationDate" type="DateTime" visibility="private"/>
+        <Field name="DoctorID" type="int" visibility="private"/>
+        <Field name="DoctorName" type="string" visibility="private"/>
+        <Field name="Reserve" type="PatternSubject" visibility="private"/>
+        <Field name="ReserveFan" type="PatternObserver" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="Update" returnType="void" visibility="public"/>
+        <Method name="Delete" returnType="void" visibility="public"/>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PatternSubject" package="" visibility="public" xPosition="1029.0" yPosition="1404.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="void" visibility="public">
+          <Argument type="AbstractObserver" name="x"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="AbstractObserver" name="x"/>
+        </Method>
+        <Method name="notify" returnType="void" visibility="public"/>
+        <Method name="updateFavorites" returnType="void" visibility="public"/>
+        <Method name="getFavorites" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PatternObserver" package="" visibility="public" xPosition="1365.0" yPosition="1432.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="AbstractObserver" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractSubject" package="" visibility="public" xPosition="1029.0" yPosition="1644.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="void" visibility="public">
+          <Argument type="AbstractObserver" name="x"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="AbstractObserver" name="x"/>
+        </Method>
+        <Method name="notify" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AbstractObserver" package="" visibility="public" xPosition="1369.0" yPosition="1663.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="AbstractSubject" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Use" source="Manager" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="Receptionist" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="Doctor" target="Invoice" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CreditCardMethod" target="IStrategy"/>
+    <IsRelation name="is" source="PatternSubject" target="AbstractSubject"/>
+    <HasRelation name="Login" source="Person" target="User" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Patient" target="Person"/>
+    <IsRelation name="is" source="Syringe" target="InvoiceDecorator"/>
+    <HasRelation name="Use" source="Doctor" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="StrategyContext" target="IStrategy" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Update" source="AbstractObserver" target="AbstractSubject" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="Employee" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Reservations" target="IControl"/>
+    <HasRelation name="Use" source="Reservations" target="PatternSubject" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="Job Type" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="User Type" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="InvoiceDecorator" target="Invoice"/>
+    <HasRelation name="Write" source="Doctor" target="Medical History" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Add Used Tools" source="Medical History" target="Invoice" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Rehister/Notify" source="AbstractSubject" target="AbstractObserver" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Receptionist" target="Employee"/>
+    <HasRelation name="Use" source="Receptionist" target="Invoice" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Doctor" target="IView"/>
+    <HasRelation name="Use" source="Patient" target="Method" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Manager" target="IView"/>
+    <HasRelation name="Take" source="Patient" target="Medical History" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CashMethod" target="IStrategy"/>
+    <IsRelation name="is" source="PatternObserver" target="AbstractObserver"/>
+    <HasRelation name="Use" source="Method" target="StrategyContext" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Lives in" source="Person" target="Address" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Receptionist" target="IControl"/>
+    <HasRelation name="Use" source="Medical History" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Employee" target="Person"/>
+    <HasRelation name="Examine" source="Doctor" target="Patient" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Doctor" target="IControl"/>
+    <IsRelation name="is" source="Manager" target="Employee"/>
+    <IsRelation name="is" source="Doctor" target="Employee"/>
+    <IsRelation name="is" source="BaseInvoice" target="Invoice"/>
+    <HasRelation name="Login" source="User" target="User Type" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Send Diagnosis" source="Doctor" target="Receptionist" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Use" source="Address" target="Database" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="Reservations" target="PatternObserver" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Cotton" target="InvoiceDecorator"/>
+    <UseRelation name="Lives in" source="Address" target="Address" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Receptionist" target="IView"/>
+    <HasRelation name="Works" source="Employee" target="Job Type" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Manager" target="IControl"/>
+    <HasRelation name="Use" source="Receptionist" target="Method" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    margin-top: 200px;
+    background: url(image.jpg);
+    background-size: Absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+table.EmployeeTable{
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 400px;
+    height: 280px;
+}
+#AddButton{
+    margin-left: 600px;
+    background-color: #9aceff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#AddButton:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#UpdateButton{
+    margin-left: 20px;
+    background-color: #9aceff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#UpdateButton:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#DeleteButton{
+    margin-left: 20px;
+    background-color: #9aceff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#DeleteButton:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
